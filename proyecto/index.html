@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskMind</title>
+<link rel="stylesheet" href="css/style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="landing-body">
+<header class="header-pro">
+    <div class="grid-header">
+        <div class="logo-tm">TaskMind</div>
+        <nav class="menu-tm">
+            <a href="#funciones">Funciones</a>
+            <a href="#info">Cómo funciona</a>
+            <a href="#contact">Contáctanos</a>
+        </nav>
+        <div class="acciones-tm">
+            <a href="auth/registro.html" class="btn-registro">Regístrate</a>
+            <a href="auth/login.html" class="btn-registro">Ingresar</a>
+        </div>
+    </div>
+</header>
+
+<section class="banner_main">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Organiza tu vida académica</h1>
+            <p>Gestiona materias, tareas, calendario e indicadores de progreso en un solo lugar.</p>
+            <div class="hero-buttons">
+                <a href="auth/registro.html" class="btn-main">Comenzar</a>
+                <a href="auth/login.html" class="btn-sec">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="info" class="funciones">
+    <h2>Cómo funciona</h2>
+    <div class="funciones-container">
+        <div class="funcion-card">
+            <i class="fa fa-graduation-cap icon-card"></i>
+            <h4>Enfoque académico</h4>
+            <p>Organiza materias, actividades y entregas por periodo escolar o universitario.</p>
+        </div>
+        <div class="funcion-card">
+            <i class="fa fa-calendar-check-o icon-card"></i>
+            <h4>Calendario claro</h4>
+            <p>Consulta las tareas próximas a vencer y revisa pendientes por día.</p>
+        </div>
+        <div class="funcion-card">
+            <i class="fa fa-line-chart icon-card"></i>
+            <h4>Indicador académico</h4>
+            <p>Visualiza tu progreso por materia y revisa consejos para mejorar.</p>
+        </div>
+    </div>
+</section>
+
+<section id="funciones" class="funciones">
+    <h2>Todo lo que puedes hacer</h2>
+    <p>TaskMind te ayuda a mantener el control de tus responsabilidades académicas.</p>
+    <div class="funciones-container">
+        <div class="funcion-card">
+            <i class="fa fa-book icon-card"></i>
+            <h4>Administra materias</h4>
+            <p>Crea tus asignaturas y revisa el avance de cada una.</p>
+        </div>
+        <div class="funcion-card">
+            <i class="fa fa-check-square-o icon-card"></i>
+            <h4>Gestiona tareas</h4>
+            <p>Filtra tareas por todas, pendientes, completadas y vencidas.</p>
+        </div>
+        <div class="funcion-card">
+            <i class="fa fa-bell icon-card"></i>
+            <h4>Prioriza entregas</h4>
+            <p>Mira primero las próximas a vencer y marca tus tareas completadas.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <h2>Contáctanos</h2>
+    <p>Tu opinión es importante para mejorar TaskMind.</p>
+    <form class="form-contacto" action="acciones/guardar_contacto.php" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <select name="tipo" required>
+            <option disabled selected>Tipo de mensaje</option>
+            <option>Opinión</option>
+            <option>Sugerencia</option>
+            <option>Problema</option>
+        </select>
+        <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+<script src="js/custom.js"></script>
+</body>
+</html>

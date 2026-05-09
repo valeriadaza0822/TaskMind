@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar contraseña - TaskMind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body class="auth-body">
+    <main class="auth-card">
+        <a class="auth-logo" href="../index.html">Task<span>Mind</span></a>
+        <h1>Recuperar contraseña</h1>
+        <p>Escribe tu correo y crea una nueva contraseña.</p>
+
+        <div class="auth-alert" id="recoverAlert" hidden></div>
+
+        <form action="../acciones/recuperar_password.php" method="POST" class="auth-form">
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <input type="password" name="password" placeholder="Nueva contraseña de 6 a 8 números" minlength="6" maxlength="8" pattern="[0-9]{6,8}" required>
+            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" minlength="6" maxlength="8" pattern="[0-9]{6,8}" required>
+            <button type="submit">Actualizar contraseña</button>
+        </form>
+
+        <small><a href="login.html">Volver al inicio de sesión</a></small>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get("error");
+        const mensajes = {
+            campos: "Completa los campos y confirma la misma contraseña.",
+            password: "La contraseña debe tener de 6 a 8 números.",
+            usuario: "No encontramos una cuenta con ese correo.",
+            bd: "No se pudo actualizar la contraseña. Intenta de nuevo."
+        };
+
+        if (error && mensajes[error]) {
+            const alert = document.getElementById("recoverAlert");
+            alert.textContent = mensajes[error];
+            alert.hidden = false;
+        }
+    </script>
+</body>
+</html>

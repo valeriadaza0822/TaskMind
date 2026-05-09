@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - TaskMind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body class="auth-body">
+    <main class="auth-card">
+        <a class="auth-logo" href="../index.html">Task<span>Mind</span></a>
+        <h1>Crear cuenta</h1>
+        <p>Empieza a organizar tus materias y tareas.</p>
+
+        <div class="auth-alert" id="registroAlert" hidden></div>
+
+        <form action="../acciones/registro.php" method="POST" class="auth-form">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" name="correo" placeholder="Correo electrónico" required>
+            <select name="institucion" required>
+                <option disabled selected>Selecciona tu institución</option>
+                <optgroup label="UNIVERSIDADES - BOGOTÁ">
+                    <option>Universidad Nacional de Colombia</option>
+                    <option>Pontificia Universidad Javeriana</option>
+                    <option>Universidad de los Andes</option>
+                    <option>Universidad del Rosario</option>
+                    <option>Universidad Externado de Colombia</option>
+                    <option>Universidad Sergio Arboleda</option>
+                    <option>Universidad de La Sabana</option>
+                    <option>Universidad Distrital Francisco José de Caldas</option>
+                    <option>Universidad Pedagógica Nacional</option>
+                    <option>Universidad Católica de Colombia</option>
+                    <option>Universidad Santo Tomás</option>
+                    <option>Corporación Universitaria Minuto de Dios - UNIMINUTO</option>
+                    <option>Corporación Unificada Nacional - CUN</option>
+                    <option>Fundación Universidad de América</option>
+                    <option>Universidad Konrad Lorenz</option>
+                    <option>Universidad Central</option>
+                    <option>Universidad La Gran Colombia</option>
+                </optgroup>
+                <optgroup label="UNIVERSIDADES - MEDELLÍN Y ANTIOQUIA">
+                    <option>Universidad de Antioquia</option>
+                    <option>EAFIT</option>
+                    <option>Universidad Pontificia Bolivariana</option>
+                    <option>Universidad de Medellín</option>
+                    <option>Institución Universitaria Tecnológica de Antioquia</option>
+                    <option>Universidad Autónoma Latinoamericana</option>
+                    <option>Universidad Metropolitana</option>
+                </optgroup>
+                <optgroup label="UNIVERSIDADES - CALI Y VALLE">
+                    <option>Universidad del Valle</option>
+                    <option>Universidad ICESI</option>
+                    <option>Universidad Autónoma de Occidente</option>
+                    <option>Universidad Santiago de Cali</option>
+                    <option>Corporación Universitaria Comfacauca</option>
+                </optgroup>
+                <optgroup label="UNIVERSIDADES - BUCARAMANGA Y SANTANDER">
+                    <option>Universidad Industrial de Santander - UIS</option>
+                    <option>Universidad Autónoma de Bucaramanga</option>
+                    <option>Fundación Universidad del Norte</option>
+                </optgroup>
+                <optgroup label="UNIVERSIDADES - OTRAS CIUDADES">
+                    <option>Universidad de Nariño - Pasto</option>
+                    <option>Universidad de Cauca - Popayán</option>
+                    <option>Universidad Técnica de Pereira - Pereira</option>
+                    <option>Universidad de Caldas - Manizales</option>
+                    <option>Universidad del Atlántico - Barranquilla</option>
+                    <option>Universidad de Córdoba - Montería</option>
+                    <option>Universidad de Sucre - Sincelejo</option>
+                    <option>Universidad Mariana - Pasto</option>
+                    <option>Cesmag - Pasto</option>
+                    <option>Universidad de la Amazonia - Florencia</option>
+                    <option>Universidad del Quindío - Armenia</option>
+                    <option>Universidad Tecnológica de Bolívar - Cartagena</option>
+                    <option>Universidad de Córdoba - Montería</option>
+                </optgroup>
+                <optgroup label="COLEGIOS - BOGOTÁ">
+                    <option>Colegio Mayor de San Bartolomé</option>
+                    <option>Gimnasio Los Andes</option>
+                    <option>Colegio Americano</option>
+                    <option>Colegio Irlandés</option>
+                    <option>Colegio Anglo Colombiano</option>
+                    <option>Colegio Nueva Granada</option>
+                    <option>Colegio Gimnasio Campestre</option>
+                    <option>Colegio La Salle</option>
+                    <option>Colegio Agustiniano</option>
+                    <option>Colegio Andino</option>
+                    <option>Colegio Calasanz</option>
+                    <option>Colegio Teresiano</option>
+                    <option>Colegio de la Presentación</option>
+                    <option>Colegio Paulo VI</option>
+                </optgroup>
+                <optgroup label="COLEGIOS - MEDELLÍN">
+                    <option>Colegio Madre Carmen Teresiano</option>
+                    <option>Colegio Bolivariano de Medellín</option>
+                    <option>Colegio Monserrate</option>
+                    <option>Colegio Cervantes</option>
+                    <option>Colegio Marymount</option>
+                    <option>Colegio Calasanz Medellín</option>
+                </optgroup>
+                <optgroup label="COLEGIOS - CALI">
+                    <option>Colegio Bolivariano de Cali</option>
+                    <option>Colegio San José</option>
+                    <option>Colegio Sagrados Corazones</option>
+                    <option>Colegio Calasanz Cali</option>
+                </optgroup>
+                <optgroup label="COLEGIOS - BARRANQUILLA">
+                    <option>Colegio Colombo Francés</option>
+                    <option>Colegio del Sinú</option>
+                    <option>Colegio Americano Barranquilla</option>
+                </optgroup>
+                <optgroup label="OTRAS">
+                    <option>Otra institución</option>
+                </optgroup>
+            </select>
+            <input type="password" name="password" placeholder="Contraseña: 6 a 8 números" minlength="6" maxlength="8" pattern="[0-9]{6,8}" inputmode="numeric" required>
+            <input type="password" name="confirmPassword" placeholder="Confirmar contraseña" minlength="6" maxlength="8" pattern="[0-9]{6,8}" inputmode="numeric" required>
+            <button type="submit">Registrarse</button>
+        </form>
+
+        <small>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></small>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get("error");
+        const mensajes = {
+            campos: "Completa todos los campos y confirma que las contraseñas sean iguales.",
+            password: "La contraseña debe tener de 6 a 8 números.",
+            existe: "Ya existe una cuenta con ese correo.",
+            bd: "No se pudo crear la cuenta. Inténtalo de nuevo."
+        };
+
+        if (error && mensajes[error]) {
+            const alert = document.getElementById("registroAlert");
+            alert.textContent = mensajes[error];
+            alert.hidden = false;
+        }
+    </script>
+</body>
+</html>

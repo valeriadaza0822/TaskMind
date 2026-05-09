@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión - TaskMind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+<body class="auth-body">
+    <main class="auth-card">
+        <a class="auth-logo" href="../index.html">Task<span>Mind</span></a>
+        <h1>Inicio de sesión</h1>
+        <p>Organiza tu mente, logra tus metas.</p>
+
+        <div class="auth-alert" id="loginAlert" hidden></div>
+
+        <form action="../acciones/login.php" method="POST" class="auth-form">
+            <input type="text" name="correo" placeholder="Correo electrónico o nombre" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+
+        <small><a href="recuperar.html">¿Olvidaste tu contraseña?</a></small>
+        <small>¿No tienes cuenta? <a href="registro.html">Regístrate</a></small>
+    </main>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get("error");
+        const mensajes = {
+            campos: "Completa el correo o nombre y la contraseña.",
+            credenciales: "El usuario o la contraseña no coinciden. Revisa los datos e intenta de nuevo.",
+            recuperada: "Contraseña actualizada. Ya puedes iniciar sesión."
+        };
+
+        if (error && mensajes[error]) {
+            const alert = document.getElementById("loginAlert");
+            alert.textContent = mensajes[error];
+            alert.hidden = false;
+        }
+    </script>
+</body>
+</html>

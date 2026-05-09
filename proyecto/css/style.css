@@ -1,0 +1,471 @@
+/* ===== TASKMIND CSS COMPLETO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tm-purple: #7554d9;
+    --tm-purple-soft: #f1ecff;
+    --tm-ink: #1c1b2e;
+    --tm-muted: #747083;
+    --tm-line: #e9e6f0;
+    --tm-bg: #f7f6fb;
+    --tm-blue: #2d8be8;
+    --tm-green: #2fb77f;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--tm-ink);
+}
+
+.landing-body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+.landing-body .logo-tm,
+.landing-body h1,
+.landing-body h2,
+.landing-body h4,
+.landing-body .btn-main,
+.landing-body .btn-sec,
+.landing-body .btn-registro {
+    font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+}
+
+/* LOGIN PAGE */
+.login-body {
+    min-height: 100vh;
+    background: var(--tm-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.task-card-login {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.logo-login {
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    color: var(--tm-purple);
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--tm-purple);
+}
+
+.btn-login {
+    width: 100%;
+    background: var(--tm-purple);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background: #6041c3;
+}
+
+.btn-registro-login {
+    display: inline-block;
+    background: transparent;
+    color: var(--tm-purple);
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 2px solid var(--tm-purple);
+    border-radius: 25px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.btn-registro-login:hover {
+    background: var(--tm-purple);
+    color: white;
+}
+
+/* HEADER MEJORADO */
+.header-pro {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 5%;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-tm {
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+    color: var(--tm-ink);
+    font-weight: 700;
+}
+
+.menu-tm {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-tm a {
+    text-decoration: none;
+    color: var(--tm-ink);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu-tm a:hover {
+    color: var(--tm-purple);
+}
+
+.acciones-tm {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-registro {
+    background: var(--tm-purple);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s;
+}
+
+.btn-registro:hover {
+    transform: translateY(-2px);
+}
+
+.user-icon {
+    font-size: 28px;
+    color: var(--tm-purple);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.user-icon:hover {
+    color: #6041c3;
+    transform: scale(1.1);
+}
+
+/* HERO */
+.banner_main {
+    height: 100vh;
+    background: linear-gradient(rgba(28,27,46,0.38), rgba(93,74,171,0.62)),
+                url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1800&q=85") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(44px, 7vw, 78px);
+    line-height: 1.02;
+    margin-bottom: 20px;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-main, .btn-sec {
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-main {
+    background: white;
+    color: var(--tm-purple);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+}
+
+.btn-main:hover {
+    background: var(--tm-purple);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(117,84,217,0.32);
+}
+
+.btn-sec {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-sec:hover {
+    background: white;
+    color: var(--tm-purple);
+    transform: translateY(-3px);
+}
+
+/* SECCIONES */
+.funciones {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.funciones h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(34px, 5vw, 48px);
+    color: var(--tm-ink);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.funciones > p {
+    font-size: 18px;
+    color: var(--tm-muted);
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.funciones-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.funcion-card {
+    background: white;
+    padding: 44px 30px 40px;
+    border: 1px solid var(--tm-line);
+    border-radius: 12px;
+    box-shadow: 0 18px 38px rgba(44, 35, 84, 0.07);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.funcion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--tm-purple-soft);
+}
+
+.funcion-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(44, 35, 84, 0.12);
+}
+
+.icon-card {
+    background: var(--tm-purple-soft);
+    border: 1px solid var(--tm-line);
+    border-radius: 18px;
+    color: var(--tm-purple);
+    display: block;
+    font-size: 46px;
+    height: 96px;
+    line-height: 1;
+    margin: 0 auto 26px;
+    filter: none;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+    width: 96px;
+}
+
+.icon-card::before {
+    display: block;
+    left: 50%;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+}
+
+.funcion-card h4 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    color: var(--tm-ink);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.funcion-card p {
+    color: var(--tm-muted);
+    line-height: 1.7;
+}
+
+/* CONTACTO */
+.contact-section {
+    padding: 120px 5%;
+    background: var(--tm-bg);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(34px, 5vw, 48px);
+    color: var(--tm-ink);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.contact-section > p {
+    font-size: 18px;
+    color: var(--tm-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-contacto {
+    max-width: 600px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-contacto input,
+.form-contacto select,
+.form-contacto textarea {
+    padding: 18px;
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.form-contacto input:focus,
+.form-contacto select:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: var(--tm-purple);
+    box-shadow: 0 0 0 3px rgba(117,84,217,0.12);
+}
+
+.form-contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-contacto button {
+    background: var(--tm-purple);
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.form-contacto button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(117,84,217,0.25);
+}
+
+/* ANIMACIONES */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header-pro {
+        padding: 15px 20px;
+    }
+    
+    .grid-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .menu-tm {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-main, .btn-sec {
+        width: 250px;
+    }
+}
